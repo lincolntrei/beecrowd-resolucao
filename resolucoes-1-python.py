@@ -24,3 +24,24 @@ A = int(input())
 B = int(input())
 PROD = A * B
 print("PROD =", PROD)
+
+#Problema 1005 - Average 1
+a = float(input())
+b = float(input())
+MEDIA = (((a * 3.5) + (b * 7.5)) / 11)
+print(f"MEDIA = {MEDIA:.5f}")
+
+#Problema 1006 - Average 2
+A = float(input())
+B = float(input())
+C = float(input())
+MEDIA = ((A * 2) + (B * 3) + (C * 5)) / 10
+print(f"MEDIA = {MEDIA:.1f}")
+
+#Problema 1007 - Difference
+A = int(input())
+B = int(input())
+C = int(input())
+D = int(input())
+DIFERENCA = A * B - C * D
+print(f"DIFERENCA = {DIFERENCA}")
