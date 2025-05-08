@@ -45,3 +45,31 @@ C = int(input())
 D = int(input())
 DIFERENCA = A * B - C * D
 print(f"DIFERENCA = {DIFERENCA}")
+
+#Problema 1008 - Salary
+num_empregado = int(input())
+horas_trabalhadas = int(input())
+salario_hora = float(input())
+salario = horas_trabalhadas * salario_hora
+print(f"NUMBER = {num_empregado}")
+print(f"SALARY = U$ {salario:.2f}")
+
+#Problema 1009 - Salary with Bonus
+nome = input()
+salario = float(input())
+total_vendido = float(input())
+print(f"TOTAL = R$ {salario + (total_vendido / 100 * 15):.2f}")
+
+#Problema 1010 - Simple Calculate
+prod1 = input()
+prod1_split = prod1.split()
+prod2 = input()
+prod2_split = prod2.split()
+
+prod1_unid = int(prod1_split[1])
+prod1_valor = float(prod1_split[2])
+prod2_unid = int(prod2_split[1])
+prod2_valor = float(prod2_split[2])
+total = (prod1_unid * prod1_valor) + (prod2_unid * prod2_valor)
+
+print(f"VALOR A PAGAR: R$ {total:.2f}")
