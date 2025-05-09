@@ -101,4 +101,42 @@ func main() {
 
     fmt.Println(fmt.Sprintf("VALOR A PAGAR: R$ %.2f", total))
 
+    //Problema 1011 - Sphere
+    const pi = 3.14159
+    var R float64
+    fmt.Scan(&R)
+    fmt.Println(fmt.Sprintf("VOLUME = %.3f", (4.0 / 3.0) * pi * (R*R*R)))
+
+    //Problema 1012 - Area
+    //IMPORTAR "strconv", "strings", "os" E "bufio"
+    reader := bufio.NewReader(os.Stdin)
+    entrada, _ := reader.ReadString('\n')
+    entrada_lista := strings.Fields(strings.TrimSpace(entrada))
+    
+    A, _ := strconv.ParseFloat(entrada_lista[0], 64)
+    B, _ := strconv.ParseFloat(entrada_lista[1], 64)
+    C, _ := strconv.ParseFloat(entrada_lista[2], 64)
+    
+    fmt.Println(fmt.Sprintf("TRIANGULO: %.3f", A * C / 2))
+    fmt.Println(fmt.Sprintf("CIRCULO: %.3f", 3.14159 * (C*C)))
+    fmt.Println(fmt.Sprintf("TRAPEZIO: %.3f", 0.5 * (C * (A+B))))
+    fmt.Println(fmt.Sprintf("QUADRADO: %.3f", B*B))
+    fmt.Println(fmt.Sprintf("RETANGULO: %.3f", A*B))
+
+    //Problema 1013 - The Greatest
+    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+    reader := bufio.NewReader(os.Stdin)
+    entrada, _ := reader.ReadString('\n')
+    entrada_lista := strings.Fields(strings.TrimSpace(entrada))
+    
+    A, _ := strconv.Atoi(entrada_lista[0])
+    B, _ := strconv.Atoi(entrada_lista[1])
+    C, _ := strconv.Atoi(entrada_lista[2])
+    
+    AB := float64(A) - float64(B)
+    MaiorAB := (A + B + int(math.Abs(AB))) / 2
+    ABC := float64(MaiorAB) - float64(C)
+    MaiorABC := (MaiorAB + C + int(math.Abs(ABC))) / 2
+    fmt.Println(fmt.Sprintf("%d eh o maior", MaiorABC))
+
 }

@@ -73,3 +73,32 @@ prod2_valor = float(prod2_split[2])
 total = (prod1_unid * prod1_valor) + (prod2_unid * prod2_valor)
 
 print(f"VALOR A PAGAR: R$ {total:.2f}")
+
+#Problema 1011 - Sphere
+pi = 3.14159
+R = float(input())
+print(f"VOLUME = {(4.0/3.0) * pi * (R * R * R):.3f}")
+
+#Problema 1012 - Area
+entrada = input()
+splitado = entrada.split()
+A = float(splitado[0])
+B = float(splitado[1])
+C = float(splitado[2])
+    
+print(f"TRIANGULO: {A * C / 2:.3f}")
+print(f"CIRCULO: {3.14159 * (C*C):.3f}")
+print(f"TRAPEZIO: {0.5 * (C * (A+B)):.3f}")
+print(f"QUADRADO: {B*B:.3f}")
+print(f"RETANGULO: {A*B:.3f}")
+
+#Problema 1013 - The Greatest
+entrada = input()
+splitado = entrada.split()
+A = int(splitado[0])
+B = int(splitado[1])
+C = int(splitado[2])
+
+MaiorAB = (A + B + abs(A - B)) / 2
+MaiorABC = (MaiorAB + C + abs(MaiorAB - C)) / 2
+print(f"{int(MaiorABC)} eh o maior")
