@@ -102,3 +102,8 @@ C = int(splitado[2])
 MaiorAB = (A + B + abs(A - B)) / 2
 MaiorABC = (MaiorAB + C + abs(MaiorAB - C)) / 2
 print(f"{int(MaiorABC)} eh o maior")
+
+#Problema 1014 - Consumption
+distancia = int(input())
+combustivel_gasto = float(input())
+print(f"{distancia / combustivel_gasto:.3f} km/l")

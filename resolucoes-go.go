@@ -139,4 +139,11 @@ func main() {
     MaiorABC := (MaiorAB + C + int(math.Abs(ABC))) / 2
     fmt.Println(fmt.Sprintf("%d eh o maior", MaiorABC))
 
+    //Problema 1014 - Consumption
+    var distancia int
+    var gasolina_gasta float64
+    fmt.Scan(&distancia)
+    fmt.Scan(&gasolina_gasta)
+    fmt.Println(fmt.Sprintf("%.3f km/l", float64(distancia) / gasolina_gasta))
+
 }

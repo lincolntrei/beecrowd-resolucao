@@ -4,35 +4,25 @@ Repositório com resoluções de problemas da plataforma [beecrowd](https://www.
 
 ## 📂 Estrutura do Projeto
 
-O projeto está dividido por linguagens e módulos de problemas. Atualmente estão disponíveis resoluções em **Python** e **Golang**, organizadas em arquivos nomeados com base no módulo correspondente do beecrowd.
+O projeto está dividido por linguagens. Atualmente estão disponíveis resoluções em **Python** e **Golang**, organizadas em arquivos nomeados com base no módulo correspondente do beecrowd.
 
 ### Arquivos disponíveis:
 
-- `resolucoes-1-python.py`  
-  Contém resoluções de problemas do **módulo 1** escritas em **Python**.
+- `resolucoes-python.py`  
+  Contém resoluções de problemas escritas em **Python**.
 
-- `resolucoes-1-go.go`  
-  Contém resoluções de problemas do **módulo 1** escritas em **Go (Golang)**.
+- `resolucoes-go.go`  
+  Contém resoluções de problemas escritas em **Go (Golang)**.
+
+- `resolucoes-sql.go`  
+  Contém resoluções de problemas escritas em **SQL (PostgreSQL)**.
 
 Cada resolução segue o seguinte formato:
 ```python
 # 1001 - Nome do Problema
 A = int(input())
 B = int(input())
-print(f"X = {A + B}")
-```
-
-Ou, em Go:
-```go
-package main
-import "fmt"
-
-func main() {
-    // 1001 - Nome do Problema
-    var a, b int
-    fmt.Scan(&a, &b)
-    fmt.Printf("X = %d\n", a+b)
-}
+print(f"RESULTADO = {A + B}")
 ```
 
 ## ✅ Objetivo
