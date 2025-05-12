@@ -107,3 +107,15 @@ print(f"{int(MaiorABC)} eh o maior")
 distancia = int(input())
 combustivel_gasto = float(input())
 print(f"{distancia / combustivel_gasto:.3f} km/l")
+
+#Problema 1015 - Distance Between Two Points
+entrada = input()
+p1string = entrada.split()
+p1 = [float(p1string[0]), float(p1string[1])]
+
+entrada = input()
+p2string = entrada.split()
+p2 = [float(p2string[0]), float(p2string[1])]
+
+distance = ((p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2) ** 0.5
+print(f"{distance:.4f}")

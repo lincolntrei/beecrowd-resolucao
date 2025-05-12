@@ -146,4 +146,54 @@ func main() {
     fmt.Scan(&gasolina_gasta)
     fmt.Println(fmt.Sprintf("%.3f km/l", float64(distancia) / gasolina_gasta))
 
+    //Problema 1015 - Distance Between Two Points
+    //RESOLUÇÃO 1 - usando interface (lista de diferentes tipos)
+    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+    reader := bufio.NewReader(os.Stdin)
+    entrada1, _ := reader.ReadString('\n')
+    p1_strings := strings.Fields(strings.TrimSpace(entrada1))
+    entrada2, _ := reader.ReadString('\n')
+    p2_strings := strings.Fields(strings.TrimSpace(entrada2))
+    
+    p1 := make([]interface{}, 2)
+    p1[0], _ = strconv.ParseFloat(p1_strings[0], 64)
+    p1[1], _ = strconv.ParseFloat(p1_strings[1], 64)
+    p2 := make([]interface{}, 2)
+    p2[0], _ = strconv.ParseFloat(p2_strings[0], 64)
+    p2[1], _ = strconv.ParseFloat(p2_strings[1], 64)
+    
+    distance := math.Sqrt(math.Pow(p2[0].(float64) - p1[0].(float64), 2) + math.Pow(p2[1].(float64) - p1[1].(float64), 2))
+    fmt.Println(fmt.Sprintf("%.4f", distance))
+
+    //RESOLUÇÃO 2 - usando struct
+    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+    //Criar struct entre função main e imports
+    type P struct {
+        x float64
+        y float64
+    }
+
+    reader := bufio.NewReader(os.Stdin)
+    
+    entrada1, _ := reader.ReadString('\n')
+    p1_strings := strings.Fields(strings.TrimSpace(entrada1))
+    p1_x, _ := strconv.ParseFloat(p1_strings[0], 64)
+    p1_y, _ := strconv.ParseFloat(p1_strings[1], 64)
+    p1 := P{
+        x:  p1_x,
+        y:  p1_y,
+    }
+    
+    entrada2, _ := reader.ReadString('\n')
+    p2_strings := strings.Fields(strings.TrimSpace(entrada2))
+    p2_x, _ := strconv.ParseFloat(p2_strings[0], 64)
+    p2_y, _ := strconv.ParseFloat(p2_strings[1], 64)
+    p2 := P{
+        x:  p2_x,
+        y:  p2_y,
+    }
+    
+    distance := math.Sqrt(math.Pow(p2.x - p1.x, 2) + math.Pow(p2.y - p1.y, 2))
+    fmt.Println(fmt.Sprintf("%.4f", distance))
+
 }
