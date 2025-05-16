@@ -1,6 +1,6 @@
 # 🐝 beecrowd-resolucao
 
-Repositório com resoluções de problemas da plataforma [beecrowd](https://www.beecrowd.com.br/), desenvolvidas por [lincolntrei](https://github.com/lincolntrei). O objetivo é estudar e praticar algoritmos e lógica de programação com foco em desafios voltados para desenvolvedores.
+Repositório com resoluções de problemas da plataforma [beecrowd](https://www.beecrowd.com.br/), desenvolvidas por [lincolntrei](https://judge.beecrowd.com/en/profile/1134626). O objetivo é estudar e praticar algoritmos e lógica de programação com foco em desafios voltados para desenvolvedores.
 
 ## 📂 Estrutura do Projeto
 
@@ -14,12 +14,12 @@ O projeto está dividido por linguagens. Atualmente estão disponíveis resoluç
 - `resolucoes-go.go`  
   Contém resoluções de problemas escritas em **Go (Golang)**.
 
-- `resolucoes-sql.go`  
+- `resolucoes-sql.sql`  
   Contém resoluções de problemas escritas em **SQL (PostgreSQL)**.
 
 Cada resolução segue o seguinte formato:
 ```python
-# 1001 - Nome do Problema
+# Problema 1001 - Nome do Problema
 A = int(input())
 B = int(input())
 print(f"RESULTADO = {A + B}")
@@ -43,6 +43,7 @@ Se quiser sugerir melhorias ou enviar outras resoluções:
 
 - Python 3.8+
 - Go 1.17+
+- psql 9+
 
 ## 📄 Licença
 

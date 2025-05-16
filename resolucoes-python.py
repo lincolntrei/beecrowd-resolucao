@@ -119,3 +119,7 @@ p2 = [float(p2string[0]), float(p2string[1])]
 
 distance = ((p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2) ** 0.5
 print(f"{distance:.4f}")
+
+#Problema 1016 - Distance
+distance = int(input())
+print(f"{distance * 2} minutos")
