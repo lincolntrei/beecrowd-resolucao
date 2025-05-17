@@ -80,8 +80,8 @@ func main() {
     fmt.Println(fmt.Sprintf("TOTAL = R$ %.2f", salario + (total_vendido / 100 * 15)))
 
     //Problema 1010 - Simple Calculate
-    //IMPORTAR "strconv", "strings", "os" E "bufio"
-    //Foi necessário usar bufio ao invés de Scan, pois o Scan não lê espaço na string
+        //IMPORTAR "strconv", "strings", "os" E "bufio"
+        //Foi necessário usar bufio ao invés de Scan, pois o Scan não lê espaço na string
     reader := bufio.NewReader(os.Stdin)
     prod1, _ := reader.ReadString('\n') // o _ ignora a variavel
     prod1_partes := strings.Fields(strings.TrimSpace(prod1))
@@ -108,7 +108,7 @@ func main() {
     fmt.Println(fmt.Sprintf("VOLUME = %.3f", (4.0 / 3.0) * pi * (R*R*R)))
 
     //Problema 1012 - Area
-    //IMPORTAR "strconv", "strings", "os" E "bufio"
+        //IMPORTAR "strconv", "strings", "os" E "bufio"
     reader := bufio.NewReader(os.Stdin)
     entrada, _ := reader.ReadString('\n')
     entrada_lista := strings.Fields(strings.TrimSpace(entrada))
@@ -124,7 +124,7 @@ func main() {
     fmt.Println(fmt.Sprintf("RETANGULO: %.3f", A*B))
 
     //Problema 1013 - The Greatest
-    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+        //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
     reader := bufio.NewReader(os.Stdin)
     entrada, _ := reader.ReadString('\n')
     entrada_lista := strings.Fields(strings.TrimSpace(entrada))
@@ -147,8 +147,8 @@ func main() {
     fmt.Println(fmt.Sprintf("%.3f km/l", float64(distancia) / gasolina_gasta))
 
     //Problema 1015 - Distance Between Two Points
-    //RESOLUÇÃO 1 - usando interface (lista de diferentes tipos)
-    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+        //RESOLUÇÃO 1 - usando interface (lista de diferentes tipos)
+        //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
     reader := bufio.NewReader(os.Stdin)
     entrada1, _ := reader.ReadString('\n')
     p1_strings := strings.Fields(strings.TrimSpace(entrada1))
@@ -165,9 +165,9 @@ func main() {
     distance := math.Sqrt(math.Pow(p2[0].(float64) - p1[0].(float64), 2) + math.Pow(p2[1].(float64) - p1[1].(float64), 2))
     fmt.Println(fmt.Sprintf("%.4f", distance))
 
-    //RESOLUÇÃO 2 - usando struct
-    //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
-    //Criar struct entre função main e imports
+        //RESOLUÇÃO 2 - usando struct
+        //IMPORTAR "strconv", "strings", "os", "bufio" E "math"
+        //Criar struct entre função main e imports
     type P struct {
         x float64
         y float64
@@ -200,5 +200,36 @@ func main() {
     var distance int
     fmt.Scan(&distance)
     fmt.Println(fmt.Sprintf("%d minutos", distance * 2))
+
+    //Problema 1017 - Fuel Spent
+    var velocidade,horas int
+    fmt.Scan(&horas)
+    fmt.Scan(&velocidade)
+    consumo := float64(horas * velocidade) / 12.0
+    fmt.Println(fmt.Sprintf("%.3f", consumo))
+
+    //Problema 1018 - Banknotes
+    var entrada,notas int
+    fmt.Scan(&entrada)
+    fmt.Println(entrada)
+    notas = int(entrada / 100)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 100,00", notas))
+    entrada = entrada - (notas * 100)
+    notas = int(entrada / 50)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 50,00", notas))
+    entrada = entrada - (notas * 50)
+    notas = int(entrada / 20)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 20,00", notas))
+    entrada = entrada - (notas * 20)
+    notas = int(entrada / 10)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 10,00", notas))
+    entrada = entrada - (notas * 10)
+    notas = int(entrada / 5)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 5,00", notas))
+    entrada = entrada - (notas * 5)
+    notas = int(entrada / 2)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 2,00", notas))
+    entrada = entrada - (notas * 2)
+    fmt.Println(fmt.Sprintf("%d nota(s) de R$ 1,00", entrada))
 
 }

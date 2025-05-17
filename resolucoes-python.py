@@ -123,3 +123,33 @@ print(f"{distance:.4f}")
 #Problema 1016 - Distance
 distance = int(input())
 print(f"{distance * 2} minutos")
+
+#Problema 1017 - Fuel Spent
+horas = int(input())
+velocidade = int(input())
+combustivel_gasto = float(horas * velocidade) / 12
+print(f"{combustivel_gasto:.3f}")
+
+#Problema 1018 - Banknotes
+entrada = int(input())
+print(entrada)
+notas = int(entrada / 100)
+print(f"{notas} nota(s) de R$ 100,00")
+entrada = entrada - notas * 100
+notas = int(entrada / 50)
+print(f"{notas} nota(s) de R$ 50,00")
+entrada = entrada - notas * 50
+notas = int(entrada / 20)
+print(f"{notas} nota(s) de R$ 20,00")
+entrada = entrada - notas * 20
+notas = int(entrada / 10)
+print(f"{notas} nota(s) de R$ 10,00")
+entrada = entrada - notas * 10
+notas = int(entrada / 5)
+print(f"{notas} nota(s) de R$ 5,00")
+entrada = entrada - notas * 5
+notas = int(entrada / 2)
+print(f"{notas} nota(s) de R$ 2,00")
+entrada = entrada - notas * 2
+print(f"{entrada} nota(s) de R$ 1,00")
+
