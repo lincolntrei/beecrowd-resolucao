@@ -232,4 +232,12 @@ func main() {
     entrada = entrada - (notas * 2)
     fmt.Println(fmt.Sprintf("%d nota(s) de R$ 1,00", entrada))
 
+    //Problema 1019 - Time Conversion
+    var n int
+    fmt.Scan(&n)
+    horas := int(n / 3600)
+    minutos := int((n - (horas * 3600)) / 60)
+    segundos := int(n - (horas * 3600) - (minutos * 60))
+    fmt.Println(fmt.Sprintf("%d:%d:%d", horas, minutos, segundos))
+
 }

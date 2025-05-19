@@ -153,3 +153,17 @@ print(f"{notas} nota(s) de R$ 2,00")
 entrada = entrada - notas * 2
 print(f"{entrada} nota(s) de R$ 1,00")
 
+#Problema 1019 - Time Conversion
+n = int(input())
+horas = int(n/3600)
+minutos = int((n - (horas * 3600)) / 60)
+segundos = n - (horas * 3600) - (minutos * 60)
+print(f"{horas}:{minutos}:{segundos}")
+
+    #RESOLUÇÃO 2 - usando datetime
+    #não bate a formatação exigida, mas legal de mencionar
+#from datetime import timedelta
+#n = int(input())
+#tempo = timedelta(seconds=n)
+#print(tempo)
+
