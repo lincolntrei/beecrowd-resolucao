@@ -240,4 +240,14 @@ func main() {
     segundos := int(n - (horas * 3600) - (minutos * 60))
     fmt.Println(fmt.Sprintf("%d:%d:%d", horas, minutos, segundos))
 
+    //Problema 1020 - Age in Days
+    var dias int
+    fmt.Scan(&dias)
+    anos := int(dias / 365)
+    meses := int((dias - anos * 365) / 30)
+    dias = dias - anos * 365 - meses * 30
+    fmt.Println(fmt.Sprintf("%d ano(s)", anos))
+    fmt.Println(fmt.Sprintf("%d mes(es)", meses))
+    fmt.Println(fmt.Sprintf("%d dia(s)", dias))
+
 }
