@@ -17,6 +17,12 @@ O projeto está dividido por linguagens. Atualmente estão disponíveis resoluç
 - `resolucoes-sql.sql`  
   Contém resoluções de problemas escritas em **SQL (PostgreSQL)**.
 
+- `sugestoes-python-gpt.py`  
+  Contém sugestões de melhorias de código feitas pelo chat GPT para **Python**.
+
+- `OUTDATED-resolucoes-go.go`  
+  Contém as primeiras resoluções escritas em **Go (Golang)**.
+
 Cada resolução segue o seguinte formato:
 ```python
 def resolucao1001():
