@@ -19,10 +19,11 @@ O projeto está dividido por linguagens. Atualmente estão disponíveis resoluç
 
 Cada resolução segue o seguinte formato:
 ```python
-# Problema 1001 - Nome do Problema
-A = int(input())
-B = int(input())
-print(f"RESULTADO = {A + B}")
+def resolucao1001():
+  # Problema 1001 - Nome do Problema
+  A = int(input())
+  B = int(input())
+  print(f"RESULTADO = {A + B}")
 ```
 
 ## ✅ Objetivo
