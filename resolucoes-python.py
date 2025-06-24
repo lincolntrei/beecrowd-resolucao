@@ -217,3 +217,12 @@ def resolucao1021():
         qtd = valor // moeda
         print(f"{qtd} moeda(s) de R$ {moeda/100:.2f}")
         valor %= moeda
+
+def resolucao1035():
+    #Problema 1035 - Selection Test 1
+    a, b, c, d = map(int, input().split())
+
+    if b > c and d > a and (c + d) > (a + b) and c >= 0 and d >= 0 and a % 2 == 0:
+        print("Valores aceitos")
+    else:
+        print("Valores nao aceitos")

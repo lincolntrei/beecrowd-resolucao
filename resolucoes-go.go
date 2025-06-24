@@ -267,3 +267,20 @@ func resolucao1021() {
         valor %= moeda
     }
 }
+
+func resolucao1035() {
+    reader := bufio.NewReader(os.Stdin)
+    entrada, _ := reader.ReadString('\n')
+    entrada_lista := strings.Fields(strings.TrimSpace(entrada))
+
+    A, _ := strconv.Atoi(entrada_lista[0])
+    B, _ := strconv.Atoi(entrada_lista[1])
+    C, _ := strconv.Atoi(entrada_lista[2])
+    D, _ := strconv.Atoi(entrada_lista[3])
+    
+    if B > C && D > A && (C + D) > (A + B) && C >= 0 && D >= 0 && (A % 2) == 0 {
+        fmt.Println("Valores aceitos")
+    } else {
+        fmt.Println("Valores nao aceitos")
+    }
+}
